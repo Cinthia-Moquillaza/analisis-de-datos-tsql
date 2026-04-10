@@ -24,3 +24,12 @@ TOP 10 *
 
 FROM FACTURAS
 go
+
+--consulta total a la tabla factura y estado redimida
+SELECT 
+TOP 10 
+SUM (MontoTotal)
+
+FROM FACTURAS
+where estado = 'Redimida'
+go
